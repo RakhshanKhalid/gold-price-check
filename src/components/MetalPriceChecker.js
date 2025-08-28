@@ -26,7 +26,7 @@ export default function MetalPriceChecker() {
   if (loading) return <p className="text-center mt-10">Loading prices...</p>;
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-6 bg-gray-100 p-6">
+    <div className="price-container">
       <h1 className="text-3xl font-bold mb-4">Gold & Silver Prices</h1>
 
       {/* Gold Card */}

@@ -13,6 +13,16 @@ function App() {
 
       <div className="body">
         <MetalPriceChecker />
+        <div className="hero">
+          <img src={HeroImage} alt="gold and silver" />
+          <p>
+            Track today’s gold price in real time. Our prices are updated
+            instantly from trusted market APIs, so you always get the most
+            accurate value. Whether you’re an investor, jeweler, or just
+            curious, this tool helps you stay informed about the latest gold
+            rates.
+          </p>
+        </div>
       </div>
 
       <footer className="footer">

@@ -1,5 +1,6 @@
 // GoldPriceCard.jsx
 import React, { useState } from "react";
+import Gold from "../assets/img_gold.png";
 
 export default function GoldPriceCard({ prices }) {
   const [unit, setUnit] = useState("g");
@@ -15,23 +16,24 @@ export default function GoldPriceCard({ prices }) {
   };
 
   return (
-    <div className="bg-white shadow-md rounded-2xl p-6 w-80">
-      <h2 className="text-xl font-semibold mb-4">Gold (XAU)</h2>
+    <div className="price-card">
+      <div className="price-card-head">
+        <img src={Gold} alt="gold" className="logo" />
+        <hr className="seperator" />
+        <h2 className="text-xl font-semibold mb-4">Gold (XAU)</h2>
+      </div>
 
-      <label className="block text-sm mb-2">Select Unit</label>
-      <select
-        value={unit}
-        onChange={(e) => setUnit(e.target.value)}
-        className="border p-2 rounded w-full mb-4"
-      >
-        <option value="g">Gram (g)</option>
-        <option value="oz">Ounce (oz)</option>
-        <option value="kg">Kilogram (kg)</option>
-      </select>
+      <div className="price-card-content">
+        <p className="text-lg font-bold text-center">
+          {getPrice()} {currency} <span>/</span>
+        </p>
 
-      <p className="text-lg font-bold text-center">
-        {getPrice()} {currency} / {unit}
-      </p>
+        <select value={unit} onChange={(e) => setUnit(e.target.value)}>
+          <option value="g">gram (g)</option>
+          <option value="oz">ounce (oz)</option>
+          <option value="kg">kilogram (kg)</option>
+        </select>
+      </div>
     </div>
   );
 }
