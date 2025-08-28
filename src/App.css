@@ -1,0 +1,53 @@
+.App {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.body {
+  max-width: 1920px;
+  flex: 1;
+}
+
+.hero-image {
+  width: clamp(256px, 100vw, 512px);
+}
+
+.gold {
+  font-family: "Cinzel", serif; /* or any elegant font */
+  font-weight: bold;
+  font-size: clamp(16px, 7vw, 56px);
+  color: #f0b811;
+  letter-spacing: 2px;
+}
+
+.logo {
+  width: clamp(16px, 10vw, 56px);
+}
+
+.navbar {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer {
+  text-align: center;
+  background-color: #002f23;
+  padding: 1rem;
+}
+
+.footer a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #f0b811;
+}
