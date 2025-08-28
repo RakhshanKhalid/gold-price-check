@@ -1,6 +1,5 @@
 import "./App.css";
 import Logo from "./assets/web_logo.png";
-import HeroImage from "./assets/img_hero.png";
 import MetalPriceChecker from "./components/MetalPriceChecker";
 
 function App() {
